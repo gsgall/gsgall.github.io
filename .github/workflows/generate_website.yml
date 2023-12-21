@@ -1,0 +1,48 @@
+name: Generate Zapdos Website
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-website:
+    runs-on: ubuntu-latest
+    # Set up a default shell for all steps
+    # See: https://github.com/marketplace/actions/setup-miniconda#use-a-default-shell
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+    - name: Checkout Zapdos
+      uses: actions/checkout@v4
+      with:
+        submodules: true
+    - name: Set up Mambaforge3 and Zapdos environment
+      uses: conda-incubator/setup-miniconda@v3
+      with:
+        miniforge-variant: Mambaforge
+        use-mamba: true
+        activate-environment: moose
+        environment-file: scripts/conda_environment.yml
+    # GitHub-hosted runners are currently limited to 2 cores
+    # See: https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
+    - name: Build Zapdos
+      run: |
+        conda activate mooose
+        make -j2
+    - name: Build MooseDocs
+      run: |
+        cd doc
+        ./moosedocs.py build --destination site
+    - name: Update gh-pages branch
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./doc/site
+        # This populates the gh-pages branch with only this update and removes prior history
+        force_orphan: true
+        user_name: github-actions
+        user_email: actions@github.com
+        commit_message: "Update zapdos website based on"
+        # The commit SHA that triggered the action is added to the end of the above message.
