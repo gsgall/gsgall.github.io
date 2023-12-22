@@ -35,7 +35,7 @@ jobs:
     - name: Build MooseDocs
       run: |
         cd doc
-        ./moosedocs.py build --destination site
+        MOOSE_DIR=~/projects/moose ROOT_DIR=./ ./moosedocs.py build --destination site
     - name: Update gh-pages branch
       uses: peaceiris/actions-gh-pages@v3
       with:
