@@ -27,10 +27,21 @@ jobs:
         environment-file: scripts/conda_environment.yml
     # GitHub-hosted runners are currently limited to 2 cores
     # See: https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
-    - name: Build MOOSE
+    - name: Activate MOOSE
       run: |
         conda activate moose
-        cd moose/test
     - name: Build MooseDocs
       run: |
         cd doc
+        MOOSE_DIR=../moose ROOT_DIR=./ ./moosedocs.py build --destination site
+    - name: Update gh-pages branch
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./doc/site
+        # This populates the gh-pages branch with only this update and removes prior history
+        force_orphan: true
+        user_name: github-actions
+        user_email: actions@github.com
+        commit_message: "Update personal website based on"
+        # The commit SHA that triggered the action is added to the end of the above message.
