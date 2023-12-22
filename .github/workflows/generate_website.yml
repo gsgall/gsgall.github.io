@@ -30,6 +30,8 @@ jobs:
     - name: Activate MOOSE
       run: |
         conda activate moose
+        cd moose/test
+        make -j 2
     - name: Build MooseDocs
       run: |
         cd doc
