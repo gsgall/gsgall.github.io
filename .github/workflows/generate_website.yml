@@ -33,4 +33,4 @@ jobs:
         cd moose/test
     - name: Build MooseDocs
       run: |
-        cd ../../doc
+        cd doc
