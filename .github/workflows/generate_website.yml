@@ -14,28 +14,6 @@ jobs:
       run:
         shell: bash -el {0}
     steps:
-    - name: Checkout MOOSE
-      uses: actions/checkout@v4
-      with:
-        submodules: true
-    - name: Set up Mambaforge3 and MOOSE environment
-      uses: conda-incubator/setup-miniconda@v3
-      with:
-        miniforge-variant: Mambaforge
-        use-mamba: true
-        activate-environment: moose
-        environment-file: scripts/conda_environment.yml
-    # GitHub-hosted runners are currently limited to 2 cores
-    # See: https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
-    - name: Activate MOOSE
-      run: |
-        conda activate moose
-        cd moose/test
-        make -j 2
-    - name: Build MooseDocs
-      run: |
-        cd doc
-        MOOSE_DIR=../moose ROOT_DIR=./ ./moosedocs.py build --destination site
     - name: Update gh-pages branch
       uses: peaceiris/actions-gh-pages@v3
       with:
