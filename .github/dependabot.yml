@@ -1,0 +1,19 @@
+version: 2
+
+updates:
+  #  Check all submodule dependencies every week (Fridays at 6PM MT / Saturdays at 1AM UTC)
+  - package-ecosystem: "gitsubmodule"
+    schedule:
+        interval: "weekly"
+        day: "saturday"
+        time: "01:00"
+    directory: "/"
+    allow:
+      # Allow updates for moose
+      - dependency-name: "moose"
+      - dependency-name: "squirrel"
+  # Maintain dependencies for GitHub Actions once a month
+  - package-ecosystem: "github-actions"
+    schedule:
+      interval: "monthly"
+    directory: "/"
