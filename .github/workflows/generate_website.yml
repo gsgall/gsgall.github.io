@@ -31,7 +31,7 @@ jobs:
       run: |
         conda activate moose
         cd moose/test
-        make -j 2
+        make -j 4
     - name: Build MooseDocs
       run: |
         cd doc
