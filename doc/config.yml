@@ -1,5 +1,5 @@
 Content:
-    rxn-cpp:
+    code-standards:
         root_dir: ${ROOT_DIR}/content
     moose:
         root_dir: ${MOOSE_DIR}/framework/doc/content
@@ -17,18 +17,20 @@ Renderer:
 
 Extensions:
     MooseDocs.extensions.navigation:
-        name: rxn-cpp
-        repo: https://github.ncsu.edu/NCSU-ComPS-Group/rxn-cpp
+        name: ComPS Code Standards
+        repo: https://github.ncsu.edu/NCSU-ComPS-Group
         menu:
             Getting Started:
-                Installation: getting_started/installation.md
-                Input Syntax: getting_started/input_syntax.md
-            How it Works:
-                Reaction Parsing: how_it_works/reaction_parsing.md
-                Species Parsing: how_it_works/species_parsing.md
-            Provided Classes:
-                NetworkParser: classes/NetworkParser.md
-                Reaction: classes/Reaction.md
-                Species: classes/Species.md
+                Build The Docs: getting_started/build_the_docs.md
+                Using Conda: getting_started/using_conda.md
+                Contributing: getting_started/contributing_to_another.md
+            Boiler Plate:
+                Project: boiler_plate/project.md
+                Documentation: boiler_plate/documentation.md
+            Standards:
+                Tutorial: standards/tutorial.md
+                C++: standards/c++.md
+                Python: standards/python.md
+
 
     MooseDocs.extensions.appsyntax: disable

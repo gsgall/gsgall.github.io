@@ -2,14 +2,10 @@
 
 # HOME style=visibility:hidden;
 
-# rxn-cpp class=center light style=font-size:300%
+# Code Standards class=center light style=font-size:300%
 
 # An open standard for reaction network io and analysis class=center style=font-weight:200;font-size:200%
 
-
-
-!media media/ReactionParse_ManimCE_v0.17.3.gif
-       style=width:75%;display:block;margin-top:3em;margin-left:auto;margin-right:auto;
 
 !media media/ncsu-logo.png style=width:25%;display:block;margin-top:3em;margin-left:auto;margin-right:auto;
 
