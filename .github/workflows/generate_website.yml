@@ -25,13 +25,9 @@ jobs:
         use-mamba: true
         activate-environment: moose
         environment-file: scripts/conda_environment.yml
-    # GitHub-hosted runners are currently limited to 2 cores
-    # See: https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners#supported-runners-and-hardware-resources
-    - name: Activate and Build MOOSE
-      run: |
-        conda activate moose
     - name: Build MooseDocs
       run: |
+        conda activate moose
         cd doc
         MOOSE_DIR=../moose ROOT_DIR=./ ./moosedocs.py build --destination site
     - name: Update gh-pages branch

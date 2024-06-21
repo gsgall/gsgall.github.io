@@ -4,3 +4,4 @@ channels:
   - https://conda.software.inl.gov/public
 dependencies:
   - moose-dev
+  
