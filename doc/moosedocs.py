@@ -25,5 +25,6 @@ if MOOSE_PYTHON_DIR not in sys.path:
     sys.path.append(MOOSE_PYTHON_DIR)
 
 from MooseDocs import main
+import subprocess
 if __name__ == '__main__':
     sys.exit(main.run())
