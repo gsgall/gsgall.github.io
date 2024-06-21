@@ -1,0 +1,111 @@
+<!DOCTYPE html><head><meta charset="UTF-8"><title>Boiler Plate Project | ComPS Code Standards</title><link href="../contrib/materialize/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"></link><link href="../contrib/prism/prism.min.css" type="text/css" rel="stylesheet"></link><link href="../css/moose.css" type="text/css" rel="stylesheet"></link><link href="../css/devel_moose.css" type="text/css" rel="stylesheet"></link><link href="../css/alert_moose.css" type="text/css" rel="stylesheet"></link><link href="../css/content_moose.css" type="text/css" rel="stylesheet"></link><link href="../css/sqa_moose.css" type="text/css" rel="stylesheet"></link><link href="../css/civet_moose.css" type="text/css" rel="stylesheet"></link><link href="../css/zapdos.css" type="text/css" rel="stylesheet"></link><script type="text/javascript" src="../contrib/jquery/jquery.min.js"></script></head><body><div class="page-wrap"><header><nav><div class="nav-wrapper container"><a href="../index.html" class="left moose-logo hide-on-med-and-down" id="home-button">ComPS Code Standards</a><a href="https://github.ncsu.edu/NCSU-ComPS-Group" class="right"><img src="../media/framework/github-logo.png" class="github-mark"></img><img src="../media/framework/github-mark.png" class="github-logo"></img></a><ul class="right hide-on-med-and-down"><li><a href="#!" class="dropdown-trigger" data-target="1b24229a-d23a-4014-ae45-e564c31bc8ee" data-constrainWidth="false">Getting Started<i class="material-icons right">arrow_drop_down</i></a></li><li><a href="#!" class="dropdown-trigger" data-target="180e2760-a4a8-4f5c-bf26-0b03e578acde" data-constrainWidth="false">Boiler Plate<i class="material-icons right">arrow_drop_down</i></a></li><li><a href="#!" class="dropdown-trigger" data-target="00acc6a9-6bdb-404e-8936-2a639c3d47b2" data-constrainWidth="false">Standards<i class="material-icons right">arrow_drop_down</i></a></li></ul><a href="#" class="sidenav-trigger" data-target="2d9508a4-0422-4d68-bc8b-4c5d93c92203"><i class="material-icons">menu</i></a><ul class="sidenav" id="2d9508a4-0422-4d68-bc8b-4c5d93c92203"><li><a href="#!" class="dropdown-trigger" data-target="fefa9f90-69f4-4964-8e68-a4803dfc5da5" data-constrainWidth="false">Getting Started<i class="material-icons right">arrow_drop_down</i></a></li><li><a href="#!" class="dropdown-trigger" data-target="c4cee95d-7c27-4681-aaf0-f3b4ce3cf403" data-constrainWidth="false">Boiler Plate<i class="material-icons right">arrow_drop_down</i></a></li><li><a href="#!" class="dropdown-trigger" data-target="dfe6dcad-68f6-4e3e-83b2-9f49891d1451" data-constrainWidth="false">Standards<i class="material-icons right">arrow_drop_down</i></a></li></ul><a href="#moose-search" class="modal-trigger"><i class="material-icons">search</i></a></div><ul class="dropdown-content" id="1b24229a-d23a-4014-ae45-e564c31bc8ee"><li><a href="../getting_started/build_the_docs.html">Build The Docs</a></li><li><a href="../getting_started/using_conda.html">Using Conda</a></li><li><a href="../getting_started/contributing_to_another.html">Contributing</a></li></ul><ul class="dropdown-content" id="180e2760-a4a8-4f5c-bf26-0b03e578acde"><li><a href="project.html">Project</a></li><li><a href="documentation.html">Documentation</a></li></ul><ul class="dropdown-content" id="00acc6a9-6bdb-404e-8936-2a639c3d47b2"><li><a href="../standards/tutorial.html">Tutorial</a></li><li><a href="../standards/c++.html">C++</a></li><li><a href="../standards/python.html">Python</a></li></ul><ul class="dropdown-content" id="fefa9f90-69f4-4964-8e68-a4803dfc5da5"><li><a href="../getting_started/build_the_docs.html">Build The Docs</a></li><li><a href="../getting_started/using_conda.html">Using Conda</a></li><li><a href="../getting_started/contributing_to_another.html">Contributing</a></li></ul><ul class="dropdown-content" id="c4cee95d-7c27-4681-aaf0-f3b4ce3cf403"><li><a href="project.html">Project</a></li><li><a href="documentation.html">Documentation</a></li></ul><ul class="dropdown-content" id="dfe6dcad-68f6-4e3e-83b2-9f49891d1451"><li><a href="../standards/tutorial.html">Tutorial</a></li><li><a href="../standards/c++.html">C++</a></li><li><a href="../standards/python.html">Python</a></li></ul></nav><div class="modal modal-fixed-footer moose-search-modal" id="moose-search"><div class="modal-content container moose-search-modal-content"><div class="row"><div class="col l12"><div class="input-field"><input type_="text" onkeyup="mooseSearch()" placeholder="/index.md" id="moose-search-box"></input></div></div><div><div class="col s12" id="moose-search-results"></div></div></div></div><div class="modal-footer"><a href="#!" class="modal-close btn-flat">Close</a></div></div></header><main class="main"><div class="container"><div class="row"><div class="col hide-on-med-and-down l12"><nav class="breadcrumb-nav"><div class="nav-wrapper"><span class="breadcrumb">boiler_plate</span><a href="#" class="breadcrumb">project</a></div></nav></div></div><div class="row"><div class="moose-content col s12 m12 l10"><section id="6ec44374-a453-431f-84db-f36766423122" data-section-level="1" data-section-text="Boiler Plate Project"><h1 id="boiler-plate-project">Boiler Plate Project</h1><section class="scrollspy" id="beb2eca7-d1cf-48bc-ba30-4714521e035d" data-section-level="2" data-section-text="Project Structure"><h2 id="project-structure">Project Structure</h2><p>For the work that we do even simple projects may contain a large amount of code. This can quickly become unruly if you include all of your code in a single file and makes maintance more difficult for future programmers. An example of a code that is very difficult to read/maintian is <a href="https://github.com/donkozoltan/eduPIC">eduPIC</a>. While eduPIC it is a great educational tool it contains all of its functionality in one file. This is good for a basic educational tool but a production quality code should be split into multiple files. Try to avoid really large files if you can but some files do just need to be big and that&#x27;s okay too.</p></section><section class="scrollspy" id="85e69d41-74e2-4caf-9c0b-3980a53a3058" data-section-level="2" data-section-text="Body - Header Split"><h2 id="body-header-split">Body-Header Split</h2><p>To improve the readability of your code you should have a header file and a body file for each file. The header contains information about what functions/classes exist in your project and provides a simple preview of what is contained in the body file without the uneeded information of the actual implementation. This is useful if you&#x27;re working on a project and you just need to know where a specific function or class exists and the variables/functions that exist in the file.</p><pre class="moose-pre"><code class="language-text">
+├── README.md
+├── Makefile
+├── main
+├── src
+│ ├── file1.C
+│ ├── file2.C
+│ └── file3.C
+├── include
+│ └── project-name
+│   ├── project-name.h
+│   ├── file1.h
+│   ├── file2.h
+│   └── file3.h
+├── test
+│ ├── Makefile
+│ ├── run_tests
+│ └── tests
+│   ├── test1.C
+│   └── test2.C
+├── doc
+│ ├── doc1.md
+│ ├── doc2.md
+└── tutorial
+  ├── tutorial.md
+  └── example-files
+    ├── ex1.C
+    └── ex2.C
+</code></pre></section><section class="scrollspy" id="cf59afeb-a306-43c1-afa5-979b5c29bed7" data-section-level="2" data-section-text="Using the project"><h2 id="using-the-project">Using the project</h2><p>In the directory <code>code-standards/boiler-plate-project</code> is a C++ project that has all of the basic requirements for a project. All of the directories, and Makefile are setup, tested and ready to use for your next production quality project. To get started with this project you should first make a new conda environment for the project see <a href="../getting_started/using_conda.html">Using Conda</a> for instructions on how to do this. Once you have conda installed you should also install <a href="https://google.github.io/googletest/">GoogleTest</a> for creating an automated testing suite.</p><pre class="moose-pre"><code class="language-bash">
+conda install -c conda-forge gtest
+</code></pre><p>Now that that is in place you can get started by copying this boiler plate project to your new project location.</p><pre class="moose-pre"><code class="language-bash">
+  cp -r ~/projects/code-standards/boiler-plate-project ~/projects/your-project-name
+</code></pre></section><section class="scrollspy" id="1ce0edbf-29aa-4f8c-9583-18e327c02012" data-section-level="2" data-section-text="Building and running as an executeable"><h2 id="building-and-running-as-an-executeable">Building and running as an executeable</h2><pre class="moose-pre"><code class="language-bash">
+  make
+  ./main
+</code></pre><p>You should see the following on the terminal</p><pre class="moose-pre"><code class="language-text">
+  Success!
+</code></pre><p>When you need to recompile the project you may also need to remove the executeable and the build directory. To do so you can simply run</p><pre class="moose-pre"><code class="language-bash">
+  make clean
+</code></pre></section><section class="scrollspy" id="dc04fab1-68d1-4693-805a-8ed26a1f88cd" data-section-level="2" data-section-text="Building and running tests"><h2 id="building-and-running-tests">Building and running tests</h2><p>All projects that are going to be made public and distributed to the broaded plasam physics community should have some level of automated testing. The first that you need to do this is that you should have some level of testing to ensure your code functions as it should. The second is that when someone else installs your project have an automated test suite for them to run helps ensure that they have installed the project correctly and it functions as expected. To run the test for this project please use the following</p><pre class="moose-pre"><code class="language-bash">
+  cd ~/projects/your-project/test
+  make
+  ./run_tests
+</code></pre><p>You should see the following as output if the tests were successful</p><pre class="moose-pre"><code class="language-text">
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Test1
+[ RUN      ] Test1.Equal
+[       OK ] Test1.Equal (0 ms)
+[----------] 1 test from Test1 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+</code></pre></section><section class="scrollspy" id="a90486e2-a71d-42a0-86b7-5f3b61d120d8" data-section-level="2" data-section-text="Building as a Dynamically Linkable Library"><h2 id="building-as-a-dynamically-linkable-library">Building as a Dynamically Linkable Library</h2><p>While you may just want to build your project in your local directories and as a single executable there are other options for building a project as well. You may for example want to build your poject as a dynamically linkable library. If you are interested in doing so you can do the following</p><pre class="moose-pre"><code class="language-bash">
+  mv Makefile Makefile-local
+  mv Makefile-as-dll Makefile
+  make
+</code></pre><p>This will compile your project as a dynamically linkable libary.</p><div class="card moose-alert moose-alert-note"><div class="card-title moose-alert-title"><i class="material-icons moose-inline-icon">comment</i><span class="moose-alert-title-brand">note:</span>Dynamically Linkable Library Usage</div><div class="card-content"><div class="moose-alert-content"><p>The way you compile as a dynamically linkable library does depend on the platform you are using. Currently the Makefile is setup for use on a macOS platform. To change this you will need to modify this line of the Makefile <code>LIBRARY_NAME = lib$(PROJECT_NAME).dylib</code>. The part you need to change is the extension. See the table below for guidance.</p></div></div></div><div form="['center', 'center']" recursive class="moose-table-div"><table><thead><tr><th style=";text-align:center">Platform</th><th style=";text-align:center">Extension</th></tr></thead><tbody><tr><td style=";text-align:center">macOS</td><td style=";text-align:center">.dylib</td></tr></tbody><tbody><tr><td style=";text-align:center">Linux</td><td style=";text-align:center">.so</td></tr></tbody><tbody><tr><td style=";text-align:center">Windows</td><td style=";text-align:center">.dll</td></tr></tbody></table></div><p>This will build the dynamically linkable library object in your local directory. If you would like to build this and then install it in your conda environment simply use</p><pre class="moose-pre"><code class="language-bash">
+  make install
+</code></pre><p>This will copy your header files and move the dynamically linkable library object to the proper place to be used as a conda package.</p></section><section class="scrollspy" id="6c30effa-35c3-463f-b96e-333f9a58e49d" data-section-level="2" data-section-text="Building with a Dynamically Linkable Library"><h2 id="building-with-a-dynamically-linkable-library">Building with a Dynamically Linkable Library</h2><p>If you would like to now use your installed project as a dynamically linkable library in another project you can use the following</p><pre class="moose-pre"><code class="language-bash">
+  mv Makefile Makefile-as-dll
+  mv Makefile-with-dll Makfile
+  make
+</code></pre><div class="card moose-alert moose-alert-warning"><div class="card-title moose-alert-title"><i class="material-icons moose-inline-icon">warning</i><span class="moose-alert-title-brand">warning:</span>Configuring your conda environment</div><div class="card-content"><div class="moose-alert-content"><p>Your computer will likely not automatically be configured to search in your conda environment for dynamically linkable libraries. In order to enable this you will need to do to the following.</p></div></div></div></section><section class="scrollspy" id="2d9d9aae-1eac-4ad8-a7de-478f5870d9af" data-section-level="2" data-section-text="macOS"><h2 id="macos">macOS</h2><pre class="moose-pre"><code class="language-bash">
+  cd $CONDA_PREFIX
+  mkdir -p ./etc/conda/activate.d
+  mkdir -p ./etc/conda/deactivate.d
+  touch ./etc/conda/activate.d/env_vars.sh
+  echo &#x27;export DYLD_LIBRARY_PATH=&quot;$CONDA_PREFIX/lib:$DYLD_LIBRARY_PATH&quot;&#x27; &gt; ./etc/conda/activate.d/env_vars.sh
+  touch ./etc/conda/deactivate.d/env_vars.sh
+  echo &#x27;unset DYLD_LIBRARY_PATH&#x27; &gt; ./etc/conda/deactivate.d/env_vars.sh
+</code></pre></section><section class="scrollspy" id="66031540-a000-4c24-ab32-f485786b1e65" data-section-level="2" data-section-text="Linux"><h2 id="linux">Linux</h2><pre class="moose-pre"><code class="language-bash">
+  cd $CONDA_PREFIX
+  mkdir -p ./etc/conda/activate.d
+  mkdir -p ./etc/conda/deactivate.d
+  touch ./etc/conda/activate.d/env_vars.sh
+  echo &#x27;export LD_LIBRARY_PATH=&quot;$CONDA_PREFIX/lib:$LD_LIBRARY_PATH&quot;&#x27; &gt; ./etc/conda/activate.d/env_vars.sh
+  touch ./etc/conda/deactivate.d/env_vars.sh
+  echo &#x27;unset LD_LIBRARY_PATH&#x27; &gt; ./etc/conda/deactivate.d/env_vars.sh
+</code></pre></section><section class="scrollspy" id="5e1a299b-f255-48be-a5cd-a756b2773373" data-section-level="2" data-section-text="Windows"><h2 id="windows">Windows</h2><p>A similar procedure may be needed for windows users. However, at tht time of writing I have not used a windows system for many years and so a little external research may be required.</p></section><section class="scrollspy" id="71e386e3-064d-4df2-9c20-c41712f77b95" data-section-level="2" data-section-text="Building Test Options"><h2 id="building-test-options">Building Test Options</h2><p>A Makefile to build the test suite with your project as an installed conda package also exists. Assuming you got the main executable to run while building your project as a dynamically linkable library you can simply do the following.</p><pre class="moose-pre"><code class="language-bash">
+  cd ~/projects/your-project/test
+  mv Makefile Makefile-local
+  mv Makefile Makefile-with-dll
+  make
+  ./run_tests
+</code></pre><p>If successful you should again see the following output</p><pre class="moose-pre"><code class="language-text">
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Test1
+[ RUN      ] Test1.Equal
+[       OK ] Test1.Equal (0 ms)
+[----------] 1 test from Test1 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+</code></pre></section><section class="scrollspy" id="f63cf516-7f89-4eaf-a2b8-c94b734c43be" data-section-level="2" data-section-text="Code coverage"><h2 id="code-coverage">Code coverage</h2><p>In the the Makefile which builds the test suite directly as an executable you will also find that it has been set up for use of <a href="https://anaconda.org/conda-forge/lcov">lcov</a>. lcov is a code coverage testing tool. This allows us to see how much of our code has actually been executed when we run our test suites. In the perfect world this should be 100% but that is often un reasonable and uneeded for most use cases. However, before any code is released there should be at least a minimum of 90% code coverage. Luckily we have taken care of the complex part of writing the Makefile to enable this feature. So lets go over the expected behaviour. When you run the <code>./run_tests</code> executable you should still see the normal output.</p><pre class="moose-pre"><code class="language-text">
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from Test1
+[ RUN      ] Test1.Equal
+[       OK ] Test1.Equal (0 ms)
+[----------] 1 test from Test1 (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+</code></pre><p>However, now we can take a closer look at the project if we run the command</p><pre class="moose-pre"><code class="language-bash">
+  make coverage
+</code></pre><p>Then you should the following html page appear in your browser.</p><picture class="materialboxed moose-image"><img src="../media/coverage_example.png" style="width:100%;display:block;margin-top:3em;margin-left:auto;margin-right:auto;"></img></picture><p>There are only two functions in this project 1 is tested and the other is not. If you click on the <code>src</code> link you will be able to see which function in which file is untested. </p></section></section></div><div class="col hide-on-med-and-down l2"><div class="toc-wrapper pin-top"><ul class="section table-of-contents"><li><a href="#beb2eca7-d1cf-48bc-ba30-4714521e035d" class="tooltipped" data-position="left" data-tooltip="Project Structure">Project Structure</a></li><li><a href="#85e69d41-74e2-4caf-9c0b-3980a53a3058" class="tooltipped" data-position="left" data-tooltip="Body - Header Split">Body - Header Split</a></li><li><a href="#cf59afeb-a306-43c1-afa5-979b5c29bed7" class="tooltipped" data-position="left" data-tooltip="Using the project">Using the project</a></li><li><a href="#1ce0edbf-29aa-4f8c-9583-18e327c02012" class="tooltipped" data-position="left" data-tooltip="Building and running as an executeable">Building and running as an executeable</a></li><li><a href="#dc04fab1-68d1-4693-805a-8ed26a1f88cd" class="tooltipped" data-position="left" data-tooltip="Building and running tests">Building and running tests</a></li><li><a href="#a90486e2-a71d-42a0-86b7-5f3b61d120d8" class="tooltipped" data-position="left" data-tooltip="Building as a Dynamically Linkable Library">Building as a Dynamically Linkable Library</a></li><li><a href="#6c30effa-35c3-463f-b96e-333f9a58e49d" class="tooltipped" data-position="left" data-tooltip="Building with a Dynamically Linkable Library">Building with a Dynamically Linkable Library</a></li><li><a href="#2d9d9aae-1eac-4ad8-a7de-478f5870d9af" class="tooltipped" data-position="left" data-tooltip="macOS">macOS</a></li><li><a href="#66031540-a000-4c24-ab32-f485786b1e65" class="tooltipped" data-position="left" data-tooltip="Linux">Linux</a></li><li><a href="#5e1a299b-f255-48be-a5cd-a756b2773373" class="tooltipped" data-position="left" data-tooltip="Windows">Windows</a></li><li><a href="#71e386e3-064d-4df2-9c20-c41712f77b95" class="tooltipped" data-position="left" data-tooltip="Building Test Options">Building Test Options</a></li><li><a href="#f63cf516-7f89-4eaf-a2b8-c94b734c43be" class="tooltipped" data-position="left" data-tooltip="Code coverage">Code coverage</a></li></ul></div></div></div></div></main></div></body><script type="text/javascript" src="../contrib/materialize/materialize.min.js"></script><script type="text/javascript" src="../contrib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="../contrib/prism/prism.min.js"></script><script type="text/javascript" src="../js/init.js"></script><script type="text/javascript" src="../js/navigation.js"></script><script type="text/javascript" src="../contrib/fuse/fuse.min.js"></script><script type="text/javascript" src="../js/search_index.js"></script><script type="text/javascript" src="../js/sqa_moose.js"></script>
